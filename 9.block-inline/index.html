@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Level vs Inline Elements</title>
+    <style>
+        /* div {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        } */
+
+        label, input[type='text'] {
+            background-color: yellow;
+        }
+        p{
+            color: blue;
+        }
+        .block {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        This is Div text
+        <h2>This is heading in a div element</h2>
+        <p>This is some text in a div element</p>
+    </div>
+    <label for="">Hello You there ?</label>
+    <input type="text" name="" id="">
+    <p>
+        This p tag has H1 inside
+        <h1>This is H1</h1>
+        <h2>This is h2</h2>
+    </p>
+    <div class="block">
+        This div tag has H1 and H2 inside
+        <h1>This is H1</h1>
+        <h2>This is h2</h2>
+    </div>
+</body>
+</html>
