@@ -1,0 +1,931 @@
+1. colors in CSS
+
+- color names
+- HTML5 colors
+- Hexadecimal codes
+- RGB - RED GREEN BLUE ( added togther is various ways)
+URL : https://en.wikipedia.org/wiki/Web_colors
+    : https://htmlcolorcodes.com/color-picker/
+
+List of Selectors
+
+Simple Selector - Select elements based on name, id and class
+Combinator slector - Select elements based on relationship between them
+Pseudo-class selectors - selecctor which matches components based on the additional condition 
+CSS - color, import, background, font 
+Pseudo-Elemnts selectors
+Attribute Selectors
+
+Combinator slector
+
+Which explains the relationship between the selectors 
+
+CSS selector can contain more than one simple selector.
+
+ between the simple selectors we can include combinator 
+
+ 4 different combinators
+
+ 1. Descendant selector (space)
+ 2. child selector (>)
+ 3. adjacent sibling selector (+) - 
+ 4. general sibling selector (~)
+
+Opacity - is a property which specifies the tranparency 
+          of an element 
+          It can take value between 0.0 to 1.0 
+          0.1, 0.2,0.3...1.0
+          The lower the value the more tranparent it is 
+
+RGB - This is a color value 
+
+RGBA - if you don't want to apply opacity to child elements 
+
+A - Specifies the Opacity and a value between 
+    0.0 (fully transparent) to 1.0 (fully opaque)
+
+RGBA - RED GREEN BLUE ALPHA :rgba(red, gree, blue, alpha)
+
+#FF SE C2 
+rgb(0,0,128)
+rgba(0,128,0,0.3)
+
+Which one to USe RGB or HEX ?
+
+It depends on choice 
+No performance differences ( both work in similar manner)
+if we are familiar with HTML devlopement - we will normally use Hexadecimal number 
+if we are from Deginer ( Photoshop) background - rgb 
+Graphic editors - will both have hexa and RGB but when it comes to copying the values hex will have single textbox 
+
+HEX - More convenient 
+    - Easy to copy 
+    - easier for daily usage 
+
+RGB - Tranparency ( opacity) 
+RGBA - RGBAlpha (0,255,5, 0.3)
+
+CSS color Module leve draft ( alpha)
+8digit Hexadecimal code 
+
+#RRGGBBAA
+
+#00ffaa80 == rgba(0,255,170, 0.5)
+
+#fff easier when comparing with this rgb(255,255,255)
+
+Background-Position 
+--------------------
+
+1. Length values (E.g. 100px 20px)
+2. Percentage (E.g 100% 20%)
+3. Keywords (E.g. right top )
+4. Mix (E.g right 50px)
+
+background-clip
+-----------------
+it defines hw far the background should extend with in element
+
+it has 3 major properties 
+1. border-box ( deafult)
+2. padding-box
+3. content-box
+
+font
+---------
+font-family - chances the face of the font
+font-style - mkes font italic 
+font-weight - incraeses or decreses how bold or light our font appears
+font-variant - create small caps effect, text will be in capital letters but in small size
+font-size - increase or decraese the font size
+font - short to specify the font properties
+
+Font-size
+------------
+Absolute                 Relative
+----------              ----------
+- pixels (px)           - em
+                        - % 
+
+deafult font-size is 16px = 1em
+font-size with pixels - user will have full control over the text
+
+Relative
+---------
+Allow users to resize the text
+
+1em is equal to 16px which is default size. 
+
+Pixel to em
+------------
+pixels/16 = em
+
+Responsive Font size ( Text size will follow the size of the browser window)
+---------------------
+16px
+1em
+25%
+10vw
+
+The text size can be set with a "vw" unit which means "Viewport Width"
+
+
+CSS Text 
+------------
+How to manipulate text using css properties
+
+1.  color - Set the color of the text
+2.  direction - set the text direction (ltr -Left to Right , rtl - Right to Left)
+3.  letter-spacing - Will help us add or subtract space between the letters that make up a word
+4.  word-spacing - will help us add or subtract space between our words of sentence
+5.  text-indent - indent the text of a paragraph
+6.  text-align - align the text of a document
+7.  text-transform - help us convert text to uppercase or lowercase letters
+8.  text-decoration - we can underline, overine and strike through the text
+9.  white-space - to control the flow and format of the text
+10. text-shadow - will help us set text shadow around a text
+
+Pseudo-Elemnt Selectors
+-----------------------
+
+Used to style specified parts of an element. we don't need javascript
+or any other script to bring the effect.
+
+1. Styling the first letter or first line of an element.
+2. Insert the content before or after the content of an element 
+
+        Hello,  Good Morning 
+                Good Morning Everybody
+        
+syntax 
+--------
+selector::pseduo-element {
+    color : red
+}
+
+:: (double colon) is introduced in css3
+CSS2, cSS1 - Single colon syntax was used for both pseduo classes and pseduo elements
+             
+content - property in CSS which is used to generate the content dynamically 
+
+::first-letter - Adds a special style to the first letter of text
+::first-line - Adds a special style to the first line of the text
+::before - Adds a text before the content
+::after - Adds a text / image after the content
+::selection - Matches the portion of an elemnt that is selected
+
+Attribute Selector 
+------------------
+
+Used to select elements with a specified attribute 
+
+for e.g  a[target] {
+    color:red
+}
+
+Selects all <a> elements with a target attribute
+
+Borders, Margin , padding, CSS BOX Model  
+
+Borders
+--------
+Used to specify the style width and color of an element's border 
+
+Border-Style 
+------------
+what kind of border to display 
+
+dotted - this displays dotted border
+dahsed - this displays dahsed border
+solid -  This displays a solid border
+double - this diplays  a double border 
+groove - This displays a 3D grooved border, depends on border color
+ridge - This displays a 3D ridge border, depends on border color
+inset - This displays a 3D inset border, depends on border color
+outset - This displays a 3D outset border. depend on border color 
+none - This doesn't display any border
+hidden - defines a hidden border
+
+
+Border-width  ( This will not work alone, requires other porperty like border-style)
+-------------
+Specifies the width of our four borders ( top, right, bottom, left)
+
+we can specifiy width using specific size - e.g. 3px , 5px, 20px
+
+we can use pre-defined values - think , medium. thick 
+
+it can have one to four values 
+
+top border, right border, bottom border, left border
+
+Border-color ( This will not work alone, use border-style property)
+-----------
+used to set the color of the four borders
+
+Border-sides  ( top, right, bottom, left)
+------------
+used to specify border for each side
+
+Border-shorthand
+-----------------
+To Shorten the code 
+
+Border-style 
+Border-width
+Border-color 
+
+Border : Style width color 
+
+Order of Border properties 
+
+1. Border-width 
+2. Border-Style
+3. Border-color 
+
+Rounded Borders
+---------------
+Rounded borders will give round shape at the edges
+
+border-radius property is used to add rounded borders to an element
+
+
+Margin
+-------
+Used to create a space around our elements, ouside of any defined borders
+
+It has four properties when it comes to defining the sides
+
+margin-top
+margin-right
+margin-bottom
+margin-left 
+
+Can have values - auto ( Browser caculates the margin)
+                - length ( specifiy margin in px, pt)
+                - % ( margin in % of width)
+
+* Can have negative values
+
+Margin shorthand
+----------------
+margin - shorthand for the margin property
+
+if margin has 4 values
+----------------------
+
+margin : 25px   50px     75px    100px
+         top    right    bottom  left
+
+if margin has 3 values
+----------------------
+
+margin : 25px      50px            75px 
+         top    left and right     bottom
+
+if margin has 2 values
+----------------------
+
+margin :     25px                   50px      
+         top and bottom        left and right     
+
+if margin has 1 value ( all four margins are of 25px)
+----------------------
+
+margin :     25px      
+         top, bottom,left and right
+
+
+Margin collpase
+---------------
+Top and bottom margin of elements are collapsed into single margin
+
+first element margin is 150 px and second element margin is 50 px 
+then margin will be collapsed total margin will become 150px 
+
+padding
+-------
+Space between element's content and element's border
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+It can have followin values - lenth - specified using px, pt, cm 
+                               %    -  % width
+
+* Negative values are not allowed
+
+Padding + Element Width
+-----------------------
+
+Width - Specifies the width of an element's content area
+
+if element has specified width then the padding added to that elelemnt 
+will be added to the total width of an element,
+
+Height and Width 
+-----------------
+Sets the height and width of an element
+
+These can have values - auto - broswer calculates height and width
+                      - length - specified in px, pt and cm
+                      - % - % of the conataining block
+                      - intial - deafult value
+                      - inherit - inherits from parent
+
+
+Outline
+-------
+An outline is a aline that is drawn around elements outside the border
+
+1. Outline is drawn outside the element's border
+2. Outline is not part of element's dimesnions 
+3. Element's width and height will not be affected by the width of outline
+
+properties
+----------
+outline-style - Sets the style of an outline
+outline-width - sets the width of an outline
+outline-color - sets the color of an outline
+outline-offset - Space between outline and border
+outline - Short hand notation , outline-width outline-style outline-color
+
+outline-style : 
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+
+Outline-width
+--------------
+
+Specifies the width of the outline
+
+it has values like thin ,medium, thick, specific size ( in px, pt)
+
+Outline-Color
+--------------
+Specifies color to the outline
+
+Outline-offset
+--------------
+Adds space between an outline and border of an element
+
+Box Model
+----------
+All HTML elements can be considred as boxes
+
+Box model is a box that wraps around every HTML element
+
+You need to have a solid understanding of box model to set the width and height of an element
+
+HTML Lists using CSS
+---------------------
+UL - unorderd List - items are marked with bullets
+OL - Ordered List - items are marked with numbers or letters.
+
+CSS Lists
+----------
+1. set different list item markers for unordered and ordered list
+2. set an image as the list item 
+3. Add background colors
+
+Position of the items
+---------------------
+list-style-position specifies the position of list item markers
+
+1. outside - This means bullet points will be placed outside the list items 
+2. Inside - This means bulluet points will be placed inside the list items 
+
+Document flow ( Order of code elelemnts)
+--------------
+It is an arrangement of page elements as defined by CSS positioning statements 
+and order of the HTML elements
+
+This is to say how each element takes up space and how other elements 
+position themseleves
+
+There are 3 ways in which we can position the elements 
+
+1. display
+2. position
+3. float
+
+display
+---------
+How an element is displayed
+
+1. Every element has a default display value depnding on what type of element it is.
+2. The default value for the most of the elements is Block or Inline
+
+Block-level elements
+--------------------
+Always starts on a new line
+takes up full width available
+
+e.g. DIV, H1-H6, P, Form, Header, Footer, Section
+
+Inline elements
+----------------
+Doesn't start on a new line, instead display next to each other
+takes up as much width as necessary
+
+e.g. span, a, image 
+
+Override the default display value
+----------------------------------
+
+1. Every element has default diaply value, however we can override this.
+2. Changing the inline element to block-level element and vice versa is possible
+   this can help making a page look specific way
+
+
+Note: Setting the display property of an elelement only changes how the elelemnt is 
+      displayed. not what kind of elelemnt it is.
+
+
+Position
+--------
+Specifies the type of positioning method used for an element.
+
+
+It has 5 different value
+
+1. static - default 
+2. relative 
+3. Absolute
+4. fixed
+5. sticky
+
+Static 
+---------
+
+1. HTML elements are positioned static by default
+2.  Static positioned elements are not affected by top, right, bottom, left 
+3. Always positioned according to the normal flow of the page
+
+top vs margin top
+-----------------
+top - is a position property, it is used with position property 
+      such as relative or absolute
+
+margin-top - Element's own property
+
+1. static - default
+--------------------
+This is a default position and will have no impact even after 
+adding top. right, bottom, left positions
+
+2. Relative 
+------------
+It is positioned relative to its normal position, 
+we can relatively position the element by uding top, right,
+bottom and left
+
+3. Absolute
+------------
+Absolutely positions an element inside of a parent container that 
+it can reference
+
+This completely removes the element from document flow and everything 
+else renders as if that absolute element doesn't even exist at all 
+
+4. fixed
+---------
+
+Very similar to absolute but with some minor caveats 
+
+always fixed based on the entire HTML elelemnt, it has nothing do 
+with parent element
+
+Unique thing about fixed elelemnts is that they stay in the same place
+
+5. Sticky
+---------
+
+Combination of both relative position and fixed position into one.
+
+float
+------
+Specifies how an elelemtn should float
+
+It is sued for positioning and formatting 
+
+for e.g.  It will allow an image to float to left of the text 
+          in a container
+
+float can have left, right, none 
+
+Float: clear
+------------
+clears the effect pf floating on the parent element.
+
+clear-left
+-----------
+clears the effect of floating left on its parent element
+
+Clear-right
+-----------
+Clears the effect of floating right on its parent element
+
+
+Overflow
+-----------
+This controls what happens to content that is big to fit into a specified area
+
+It specifies whether to clip (cut or trim) the content or add scrollbar when the 
+content of elelemnt is too big 
+
+It has got following values 
+
+visible - Default. The overflow is not clipped, content renderes outside the 
+          element's box
+
+hidden - The overflow is clipped and the rest of the content will be invisible
+
+scorll - The oerflow is clipped, scrollbar is added to content to see the rest
+         of the content
+
+         This will add scrollbar both horizontally and vertically
+
+auto - This is similar to scroll, but it adds scrollbar only when necessary
+
+Note: Overflow property only works for block-level elements with a specified height
+-----
+
+Align elelements ( Horizontal align or Vertical Align)
+------------------------------------------------------
+
+center-align
+----------------
+To Horizontally center block-level elements use margin:auto
+
+Setting up width of an element will prevent from stretching 
+out of the edges of the container.
+
+The element will then take the specified width and remaining space 
+will be split equally between two margins.
+
+CSS Units
+------------
+
+1. Absolute Unit
+-----------------
+
+ a. pixel (px)
+ b. inches (in)
+ c. centimeters (cm)
+ d. millimeters (mm)
+ e. points (pt)
+ f. picas (pc)
+
+
+2. Relative Unit
+-----------------
+
+ a. percentage (%)
+ b. font-sizes (em & rem)
+ c. character-sizes (ex & ch)
+ d. viewport dimensions (vw & vh)
+ e. Viewport max (vmax)
+ f. viewport min (vmin)
+
+ Relative Units are based on 
+ -----------------------------
+
+ 1. The Parent Dimensions (%)
+ 2. The currently declared font attribute (em, rem, ex, ch)
+ 3. The viewport dimensions (vw, vh, vmin, vamx)
+
+ Viewport dimensions
+ -------------------
+ 1. vw - viewport width
+ 2. vh - viewport height
+ 3. vmin - viewport minimum
+ 4. vmax - viewport maximum
+
+ vw, vh divide viewport in a grid of 100 Units
+
+ Viewport - User's visible are of the webpage
+
+ varies with device and will be smaller on a phone than on a computer
+
+ vmin - which uses ratio of smallest size. That is if the height of the
+        browser windows is less than its width 1vmin is equivalent to 1vh.
+        if the the width of the browser is less than its height 1vmin is 
+        equivalent to 1vw
+
+vmax - It uses largest side. 1vmax is equivalent of 1vw if the viewport is 
+       wider than it is tall. if the browser is taller than it is wide 1vmax
+       will be equivalent of 1vh
+
+
+Percentage vs Viewport
+-----------------------
+Since viewport units are a percentage of the size of the viewport, 
+it can seem at first glance that specifying size as percentages would be equivalent.
+
+The difference is that viewport units are always a percentage of the total viewport 
+while percentage value applied on element is a percentage of elements's parent but
+not necessarily the viewport
+
+ ex (character-size)
+ -------------------
+ Relative to the x-height of the current font ( rarely used)
+
+ x-height is roughly the height of lowercase letters such as a,b,c,d..etc
+
+ch (character-size)
+-------------------
+Relative to the width of "0" 
+
+if height is 1ch then that is equal to 8px 
+
+em and rem (font-sizes)
+-----------------------
+em - relative to the font-size of the element ( parent element)
+
+rem - relative to the font-size of the root element.
+
+In almost every browser , 16px is the standard for proportional fonts
+
+user can control the font-size
+
+1 rem =16px
+
+Absolute Units
+--------------
+The absolute length units are fixed and length expressed in any of these will
+appear exatctly that size
+
+You can use if you are aware of output medium ( print, screen)
+
+Not recommended for various screen sizes
+
+cm, mm, in, px, pt,pc
+
+1in = 96px
+1cm = 37.8px
+1mm= 0.1cm = 3.78px
+
+1em == 16px == 0.17 in = 12pt = 1pc == 4.2 mm = 0.42cm 
+
+Inches (in)  1in = 96px = 2.54cm
+---------------------------------
+Inch unit is same as centimeters and used for "Print" media 
+
+Pixel (px)
+----------
+Most uasble and tried measure in browser
+Normalize measure for all devices and display true measurement
+
+Point (pt) (1pt = 1/72th size of an inch)
+-----------------------------------------
+Used for physical measurement.
+
+Picas (pc)  (12pt == 1pc)
+-------------------------
+Pics is same as point 
+
+
+CSS Advanced
+------------
+
+Rounded Corners - Add special colord corners to body or text
+
+border-radius - defines the radius of en element's corner
+
+1. Rounded corner for an elelment with specified background color
+2. Rounded corner for an elelment with a border
+3. Rounded corner for an element with background image
+
+Background-Radius is a shorhand property for 
+
+1. background-top-left-radius
+2. background-top-right-radius
+3. background-botton-right-radius
+4. background-bottom-left-radius
+
+It can have one to four values
+-------------------------------
+
+With four values
+--------------------
+border-radius : 15px              30px                50px                  15px 
+
+                top-left-corner   top-right-corner   bottom-right-corner    bottom-left corner
+
+with three values
+-------------------
+border-radius : 15px                            30px                               15px 
+
+                top-left-corner   top-right-corner   bottom-left-corner           bottom-right corner
+
+
+with two values
+-------------------
+border-radius :                15px                                                30px                           
+
+                top-left-corner   bottom-right-corner            top-right-corner           bottom-left corner
+
+with one value 
+----------------
+
+border-radius : 25px ( this applies to all four corner)
+
+Border Image
+--------------
+Allows you to specify an image to be ised instead of normal border around your element.
+
+it has three parts :
+--------------------
+
+border-image : url("image")  25%  repeat
+                   1          2    3
+
+1. An image to use as border
+2. Where to slice the image, divide your image into 9 sections
+3. How the browser should apply those sections to the edges of your element
+
+Note :  Cab be applied to any element except internal table values ( tr, th , td) 
+        when border is set to collpase 
+
+Border-Image: border-image-source -  Specifies the source of the image
+              border-image-slice  -  How to slice the border
+              border-image-width  -  Specifies width of the browser
+              border-image-outset -  Specifies the amount by which border image area 
+                                    extends beyond the border box 
+              border-image-repeat - Specifies whether border image should be repeated,
+                                    rounded or strechted
+
+Gradients
+---------
+Gradients displays the comination og two or more colors to your element
+
+
+Types
+-----
+Linear Gradient (down/up/left/right diagonally)
+Radial Gradient
+
+Gradients uses background image
+
+Liner Gradient (Most common format)
+--------------
+direction - top to bottom ( default)
+
+background-color - can be treated like fallback 
+
+background-image - will be be on top if browsers supports it
+
+background : red
+background : linear-gradient (red, orange)
+
+- This will reset other properties like background-position but it does know what we mean
+
+Gradient axis can go from left to right or right to left or top to bottom or any angle 
+that we choose.
+
+Not declaring any angle will assume top to bottom
+
+to make it left to right we pass additional parameter at the begining.
+
+Starting with word "to" indicating direction like "to right"
+
+This syntax works for corners as well. For instance if you wanted the axis of the gradient 
+to start at the bottom left corner to go to the top right corner we can say "to top right"
+
+You can also declare where you want any perticular color to start and those are called 
+color-stops.
+
+if you want more red then say red 10%, yellow, if you want more yellow the say 
+yellow 10% red
+
+Radial Gradient
+----------------
+
+This differes from linear, it starts at a single point and emanate outwards
+
+The default is for the first color to start in the center of the element and fade to the 
+end color towrads the edge of the element.
+
+We need at least two colors to define radial gradient
+
+readial-gradient (shape , start color, ...., last color)
+
+by default shape is ellipse
+
+Transistions
+------------
+
+allows to change the property values smoohtly over given duration
+
+
+transistion 
+transition-delay 
+transistion-duration 
+transition-property
+transition-Timing-function
+
+1. CSS property you want to add an effect to 
+2. the duration of the effect
+
+Note: If the durration is not specified then transistion will have no effect
+-----
+
+Transistion-Timing-Function
+---------------------------
+Specifies the speed curve of the transistion effect
+
+can have following values
+
+1. ease - specifies a transistion effect with a slow start , then fast and end slowly (default)
+2. linear - specifies transition effect with same speed from start to end
+3. ease-in - specifies transition effect with slow start
+4. ease-out - specifies transistion effect with slow end
+5. ease-in-out - specifies transition effect with slow start and end
+
+
+Transform
+----------
+allows us to move, rotate, scale and skew elements
+
+1. transalate - moves an elelement from its current position ( according to X-axis and Y-axis)
+
+
+Position: absolute vs transform
+------------------------
+Position:absolute - This is placed according to its parent element, changes accroding 
+           to parent's position
+        
+transform - This is based on itself, if the object is moved it will transalate 
+            according to its new position
+
+2. rotate - will rotate an element clockwise or anti-clockwise 
+            according to given degree
+
+3.scale - increases or decreases the size of an elelemnt (width and height)
+
+scaleX - increase or decraese width of an element
+scaleY - increase or decraese height of an element
+
+skew
+-------
+Skews an element along the x and y axis
+
+skewX - skews element along the x-axis by given angle
+---------
+
+transform:skewX(20deg)
+
+skewX - skews element along the y-axis by given angle
+
+transform:skewY(10deg)
+
+matrix
+--------
+This combines all 2D transformatiosn into one
+
+matrix (scaleX(),skewY(), skewX(),scaleY(), transalate())
+
+3D Transform
+------------
+This uses X , Y and Z axis
+
+rotateX - rotate an elelemnt around X-axis
+rotateY - rotate an elelemnt around Y-axis
+rotateZ - rotate an elelemnt around Z-axis
+
+CSS Variables
+-------------
+Gives us a way /mechanism to reuse and easiliy change "repeatedly ouucring CSS propertis"
+
+To declare CSS variable we will have to add a double dash before the name of the variable
+
+body {
+    --indian-green-color: #00FF00
+    --main-text-color : red
+    --div-background-color:yellow
+}
+
+:root { // pseudo class element
+
+}
+
+ html {
+
+ }
+
+complex websites and have very large amounts of css often with repated values
+
+custome properties allows a value to be stored in one place
+refrenced in multiple places
+semantic identifiers
+
+--maint-text-color eaiser to understand 

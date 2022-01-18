@@ -1,6 +1,9 @@
+@import url("../home.css");
+
 h1 {
     color: blue;
 }
 p {
     color: red;
 }
+
